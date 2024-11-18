@@ -1,0 +1,109 @@
+/* 1. Appliquer une base cohérente sur tous les éléments */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Suppression des décorations par défaut */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, figure, dl, dd {
+    margin: 0;
+}
+
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, textarea, select {
+    font: inherit;
+    color: inherit;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    appearance: none;
+}
+
+/* 3. Taille et configuration du texte */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+/* 4. Images et médias */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+svg {
+    fill: currentColor;
+    display: block;
+}
+
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* 5. Accessibilité et focus */
+:focus {
+    outline: none;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* 6. Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+/* 7. Défaut pour les formulaires */
+input, textarea, select, button {
+    border-radius: 0;
+}
+
+/* 8. Textarea */
+textarea {
+    all: unset;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    resize: vertical;
+    scrollbar-width: none;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea:focus {
+    outline: none;
+}
